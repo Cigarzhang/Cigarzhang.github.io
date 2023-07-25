@@ -8,7 +8,7 @@
       <link href="//fecf9abe.html"/>
       <url>//fecf9abe.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言：为什么要精通指针"><a href="#前言：为什么要精通指针" class="headerlink" title="前言：为什么要精通指针"></a>前言：为什么要精通指针</h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言：为什么要精通指针："><a href="#前言：为什么要精通指针：" class="headerlink" title="前言：为什么要精通指针："></a>前言：为什么要精通指针：</h2><p>C程序员新手和老手一大差别就在于是否对指针有深刻理解，能否高效利用指针。指针在c语言中随处可见，也提供了极大的灵活性。指针为动态内存分配提供了重要支持，与数组表示法紧密相关，指向函数的指针也为程序中的流控制提供了更多的选择。具体优势如下：</p><ol><li>写出快速高效的代码<br> 指针更接近硬件，编译器可以更容易的把操作翻译成机器码，用指针可以写出快速高效的代码。</li><li>为解决很多类问题提供方便的途径<br>很多数据结构用指针更容易实现，如链表可以用数组实现，也可以用指针实现。</li><li>支持动态内存分配</li></ol>]]></content>
       
       
       <categories>
