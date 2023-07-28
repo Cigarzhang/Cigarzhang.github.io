@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>深入理解c指针</title>
-      <link href="//fecf9abe.html"/>
-      <url>//fecf9abe.html</url>
+      <title>计算机科学导论</title>
+      <link href="//8058807d.html"/>
+      <url>//8058807d.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言：为什么要精通指针："><a href="#前言：为什么要精通指针：" class="headerlink" title="前言：为什么要精通指针："></a>前言：为什么要精通指针：</h2><p>C程序员新手和老手一大差别就在于是否对指针有深刻理解，能否高效利用指针。指针在c语言中随处可见，也提供了极大的灵活性。指针为动态内存分配提供了重要支持，与数组表示法紧密相关，指向函数的指针也为程序中的流控制提供了更多的选择。具体优势如下：</p><ol><li>写出快速高效的代码<br> 指针更接近硬件，编译器可以更容易的把操作翻译成机器码，用指针可以写出快速高效的代码。</li><li>为解决很多类问题提供方便的途径<br>很多数据结构用指针更容易实现，如链表可以用数组实现，也可以用指针实现。</li><li>支持动态内存分配</li></ol>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="图灵模型"><a href="#图灵模型" class="headerlink" title="图灵模型"></a>图灵模型</h3><h4 id="图灵机：什么是图灵机"><a href="#图灵机：什么是图灵机" class="headerlink" title="图灵机：什么是图灵机"></a>图灵机：什么是图灵机</h4><ul><li>Alan Turing（阿兰-图灵）1937年首次提出通用计算机设想：所有的计算都可能在一种特殊的机器上执行。</li><li>是一种数学上的描述，不是一台真实的机器。</li></ul><h4 id="数据处理器"><a href="#数据处理器" class="headerlink" title="数据处理器"></a>数据处理器</h4><p>首先暂且把计算机可以被看作一种接收数据输入、处理数据并产生数据输出的<strong>黑盒</strong>。</p><p><img src="https://p.ipic.vip/hcuo8v.png" alt="图片 1"></p><p>问题：没有确定计算机能处理的数据是什么。</p><h4 id="可编程数据处理器"><a href="#可编程数据处理器" class="headerlink" title="可编程数据处理器"></a>可编程数据处理器</h4><p>图灵模型：可编程计算机</p><p>​    <img src="https://p.ipic.vip/xa48wn.png" alt="image-20230728175245641" style="zoom: 67%;" />  </p><p>程序：告诉计算机对数据处理的的指令集合</p>]]></content>
       
       
       <categories>
@@ -20,51 +20,7 @@
       
         <tags>
             
-            <tag> C语言 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>组合数学</title>
-      <link href="//7ff86023.html"/>
-      <url>//7ff86023.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数学 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数学类 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>逃离现实的必读之选——推荐乔治·奥威尔的《1984》</title>
-      <link href="//8699a9b9.html"/>
-      <url>//8699a9b9.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h4><p>​        大家好！今天我要向大家推荐一本引人深思的好书——乔治·奥威尔的《1984》。作为一部经典的反乌托邦小说，《1984》以其深刻的思想、惊人的预见和精湛的文笔，在文学史上留下了浓墨重彩的一笔。它揭示了权力、控制和自由的悲剧，引导我们深入思考现实社会的种种问题。现在，让我们一起来探索《1984》的独特魅力吧！</p><h4 id="1-作品概述："><a href="#1-作品概述：" class="headerlink" title="1.作品概述："></a>1.作品概述：</h4><p>​     《1984》是一部科幻小说，以虚构的未来世界为背景，描述了一个被极权主义统治的社会。奥威尔通过刻画主人公温斯顿·史密斯在这个社会中的经历，揭示了权力滥用、思想控制和个体自由受限的恐怖现实。小说中的“大哥”、“思想警察”以及著名的“新话”等元素成为文化的象征，深深影响了后世。</p><h4 id="2-推荐理由："><a href="#2-推荐理由：" class="headerlink" title="2.推荐理由："></a>2.推荐理由：</h4><p>（a）警醒人心：《1984》通过构建一个极权社会的恐怖景象，警醒我们保护自由和个体思想的重要性。作品中的智能监控、思想改造等手段令人寒心，引发人们对权力滥用的深思。</p><p>（b）现实预见：尽管奥威尔在书中描绘的未来年份是“1984”，但他对政治、社会和科技的预见性令人震撼。作品中虚构的极权主义社会在许多方面与现实世界的某些问题惊人地相似，如虚假信息、大规模监控和思想控制等。</p><p>（c）文学价值：奥威尔的文笔优雅而精准，他运用细腻的描写和深入的人物刻画，将读者带入一个充满紧张氛围和压抑情绪的世界。作品中的想象力、隐喻和象征手法使其成为文学经典，深受读者喜爱。</p><h4 id="3-影响与启示："><a href="#3-影响与启示：" class="headerlink" title="3.影响与启示："></a>3.影响与启示：</h4><p>​        《1984》对现代社会产生了深远的影响。它让我们意识到自由、隐私和个人权利的重要性，激发我们对权力运作和思想控制的思考。这部小说提醒我们警惕权力滥用和信息操控，促使我们保护和捍卫人类的尊严和自由。</p><h4 id="4-总结："><a href="#4-总结：" class="headerlink" title="4. 总结："></a>4. 总结：</h4><p>​     《1984》是一本必读的书籍，它揭示了权力与自由的永恒斗争，并引发了读者对社会现实的深刻思考。奥威尔的作品不仅具有深刻的政治哲学，还以其文学价值和预见性赢得了广泛的赞誉。读完《1984》，你将深刻体会到逃离现实的渴望和追求自由的勇气。让我们跟随温斯顿·史密斯的脚步，一同思考和反思，共同追求一个更加自由和公正的世界！</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 好书推荐 </tag>
+            <tag> 计算机 </tag>
             
         </tags>
       
