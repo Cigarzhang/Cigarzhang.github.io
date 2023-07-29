@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>算法模版</title>
+      <link href="//bb13e2f5.html"/>
+      <url>//bb13e2f5.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-基础算法"><a href="#1-基础算法" class="headerlink" title="1. 基础算法"></a>1. 基础算法</h1><h2 id="1-1快速排序算法模版"><a href="#1-1快速排序算法模版" class="headerlink" title="1.1快速排序算法模版"></a>1.1快速排序算法模版</h2><pre class="mermaid">graph TD    A((开始)) --> B[选择轴心]    B --> C{左边有元素比轴心小吗}    C --是--> D[将元素移动到左边]    D --> C    C --否--> E{右边有元素比轴心大吗}    E --是--> F[将元素移动到右边]    F --> E    E --否--> G{左右子序列长度>1}    G --是--> B    G --否--> H((结束))</pre><p>​        快速排序是一种常用的排序算法，它的平均复杂度为$O(n \log n)$，且在实践中表现得非常好。它是由C.A.R. Hoare在1960年提出的。它的工作原理是这样的：</p><ol><li>选择一个“轴心”元素x，这段代码中的选择方式是选择中间元素，<code>x = q[l + r &gt;&gt; 1]</code>。</li><li>把所有小于x的元素移动到它的左边，所有大于x的元素移动到它的右边。这个过程叫做划分（partition）。</li><li>对左边和右边的两个子序列递归地执行步骤1和2。</li></ol><p>​        用一个生活中的例子来解释一下，想象一下你正在打扫一间充满各种尺寸书籍的书房。你可以选择一个中间大小的书（这就是轴心），然后把所有小于它的书放在左边，所有大于它的书放在右边。然后，你分别在左边和右边的书堆里重复这个过程，直到每一堆书都按照大小顺序排列好。</p><p>​        证明这个算法的正确性，我们可以从以下几点进行：</p><ol><li>初始情况：当序列长度为1时，序列显然是已排序的。</li><li>递归步骤：通过选择轴心并进行划分，我们知道所有在左边的元素都小于等于x，所有在右边的元素都大于等于x。因此，如果左边和右边的子序列是已排序的，那么整个序列就是已排序的。</li><li>因此，如果我们对左边和右边的子序列递归地执行快速排序，那么最终整个序列就会变成已排序的。</li></ol><p><strong>模版如下：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> q[],<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">  <span class="type">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>, x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">  <span class="keyword">while</span> (i &lt; j)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">do</span> i ++, <span class="keyword">while</span> (q[i] &lt; x);</span><br><span class="line">    <span class="keyword">do</span> j --, <span class="keyword">while</span> (q[j] &gt; x);</span><br><span class="line">    <span class="keyword">if</span> (i &lt; j) <span class="built_in">swap</span>(q[i], q[j]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">quick_sort</span>(q, l, j);</span><br><span class="line">  <span class="built_in">quick_sort</span>(q, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>​        在这个<code>quick_sort</code>函数中，<code>i</code>和<code>j</code>被设置为<code>l-1</code>和<code>r+1</code>，是为了让<code>i</code>和<code>j</code>在循环的开始阶段向中心移动，以便它们可以从数组的两侧开始，并逐渐向中心靠近。在算法开始时，我们希望<code>i</code>从左边开始，<code>j</code>从右边开始，因此我们将<code>i</code>和<code>j</code>设置为<code>l-1</code>和<code>r+1</code>，这样在第一次执行<code>do-while</code>循环时，<code>i</code>会加1，<code>j</code>会减1，所以<code>i</code>和<code>j</code>就分别指向了数组的第一个元素和最后一个元素。</p><p>​        关于<code>if (i &lt; j) swap(q[i], q[j]);</code>的判断，这一句是在对数组进行划分。这是快速排序算法的关键步骤，它选择一个元素作为“pivot”（在这个例子中，选择的是<code>q[l + r &gt;&gt; 1]</code>，也就是数组中间的元素），然后将所有小于pivot的元素放在pivot的左边，将所有大于pivot的元素放在pivot的右边。<code>if (i &lt; j) swap(q[i], q[j]);</code>就是这个划分过程的一部分，当<code>i</code>小于<code>j</code>时，说明当前的<code>i</code>位置的元素大于pivot，<code>j</code>位置的元素小于pivot，那么我们就交换这两个元素的位置。</p><p>​        我们来举一个生活中的例子。想象一下，你是一个老师，你有一堆学生的考试成绩，你想按照成绩将学生分成两组，一组是成绩高于平均值的，一组是成绩低于平均值的。这就好比是你选择了平均分作为你的“pivot”，然后你从最低分（<code>i=l-1</code>）和最高分（<code>j=r+1</code>）开始，分别向高分和低分方向寻找，直到找到一个低于平均分的高分学生和一个高于平均分的低分学生，然后你就让他们换位置，这就是<code>swap(q[i], q[j])</code>的过程。你一直重复这个过程，直到你检查完所有的学生，这样你就成功地将学生分成了两组。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> cs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机科学导论</title>
       <link href="//8058807d.html"/>
       <url>//8058807d.html</url>
